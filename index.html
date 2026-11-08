@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFF4E6">
+<title>omahcoding – Belajar Islam dan IPTEKS</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cr:#FFF4E6;--co:#F66B52;--ink:#2b2320;--mu:#8c7f78;--card:#fff;--ln:#f0e4d4;--ok:#2f9e63;--no:#d64545;box-sizing:border-box}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--cr);color:var(--ink);font:15px/1.55 Rubik,system-ui,sans-serif;min-height:100vh;-webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;padding:0;text-align:left}
+button:focus-visible,input:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+svg{display:block}svg.i{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{max-width:520px;margin:0 auto;padding:calc(18px + env(safe-area-inset-top,0px)) 18px calc(112px + env(safe-area-inset-bottom,0px))}
+h1,h2,h3,p{margin:0}h2{font-size:17px;font-weight:600;margin:22px 0 12px}
+.hd{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.av{width:46px;height:46px;border-radius:50%;background:#D9457B;display:grid;place-items:center;flex:none;overflow:hidden}
+.hd b{display:block;font-size:17px;font-weight:600;line-height:1.2}.hd span{font-size:12.5px;color:var(--mu)}
+.card{background:var(--card);border-radius:20px;padding:14px;box-shadow:0 3px 0 var(--ln)}
+.pg{display:flex;align-items:center;gap:16px}.pg b{font-size:20px;display:block;line-height:1.2}.pg span{color:var(--mu);font-size:13px}
+.ring{position:relative;width:64px;height:64px;flex:none}.ring svg{width:64px;height:64px;transform:rotate(-90deg)}.ring i{position:absolute;inset:0;display:grid;place-items:center;font-style:normal;font-weight:600;font-size:13px}
+.books{margin-left:auto}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cc{border-radius:22px;background:var(--card);overflow:hidden;box-shadow:0 4px 0 var(--ln);display:flex;flex-direction:column;width:100%}
+.cc .tp{background:var(--c);height:74px;display:flex;justify-content:center;align-items:flex-end;padding-bottom:0}
+.cc .tp svg{margin-bottom:-4px}
+.cc .bd{padding:10px 12px 14px}.cc b{display:block;font-size:14.5px;line-height:1.25;font-weight:600;min-height:36px}
+.bar{height:6px;background:#f3e8d9;border-radius:6px;overflow:hidden;margin:8px 0 4px}.bar i{display:block;height:100%;background:var(--c,var(--co));border-radius:6px;transition:width .4s}
+.cc small,.sm{color:var(--mu);font-size:11.5px}
+.sb{display:flex;align-items:center;gap:10px;background:#fff;border-radius:16px;padding:0 14px;height:46px;margin-bottom:22px;box-shadow:0 3px 0 var(--ln);color:var(--mu)}
+.sb input{flex:1;border:0;background:none;font:inherit;color:var(--ink);min-width:0;outline-offset:8px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 14px;padding:4px 2px}
+.tile{position:relative;isolation:isolate;aspect-ratio:1;border-radius:22px;background:var(--c);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;transform:rotate(-3deg);transition:transform .2s;width:100%;text-align:center;font-weight:600;font-size:12.5px;line-height:1.2;padding:6px}
+.tile::before{content:"";position:absolute;inset:0;border-radius:22px;background:var(--d);transform:rotate(9deg);z-index:-1}
+.tile:nth-child(even){transform:rotate(3deg)}.tile:hover,.tile:active{transform:rotate(0) scale(1.04)}
+.tile svg.i{width:30px;height:30px}.tile em{position:absolute;top:6px;right:8px;font-style:normal;font-size:11px;background:#fff;color:var(--ink);border-radius:10px;padding:0 7px;font-weight:600}
+.band{background:var(--c);color:#fff;margin:calc(-18px - env(safe-area-inset-top,0px)) -18px 18px;padding:calc(18px + env(safe-area-inset-top,0px)) 18px 22px;border-radius:0 0 30px 30px}
+.back{display:flex;align-items:center;gap:6px;font-weight:500;font-size:14px;margin-bottom:16px;color:#fff}
+.bt{display:flex;gap:14px;align-items:center}.bt .ib{width:62px;height:62px;border-radius:18px;background:#fff;color:var(--ink);display:grid;place-items:center;flex:none}.bt h1{font-size:21px;line-height:1.2;font-weight:600}.bt span{font-size:13px;opacity:.9}
+.row{display:flex;align-items:center;gap:12px}
+.acc{background:#fff;border-radius:16px;margin-bottom:10px;box-shadow:0 3px 0 var(--ln);overflow:hidden}
+.acc>button{display:flex;align-items:center;gap:10px;width:100%;padding:14px;font-weight:500}
+.acc .ck{width:22px;height:22px;border-radius:50%;border:2px solid var(--ln);display:grid;place-items:center;flex:none;color:#fff}
+.acc .ck.on{background:var(--ok);border-color:var(--ok)}.acc .ck svg{width:13px;height:13px;stroke-width:3}
+.acc .ch{margin-left:auto;transition:transform .2s;color:var(--mu)}.acc.open .ch{transform:rotate(90deg)}
+.acc .tx{padding:0 14px 14px 46px;color:#4a403b;font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--co);color:#fff;font-weight:600;border-radius:16px;padding:13px 22px;box-shadow:0 4px 0 #c94d38;transition:transform .1s}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #c94d38}.btn.alt{background:#fff;color:var(--ink);box-shadow:0 4px 0 var(--ln)}.btn.blk{width:100%}
+.ql{display:flex;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:14px;box-shadow:0 3px 0 var(--ln);width:100%}
+.ql .sc{margin-left:auto;background:#e3f5ea;color:var(--ok);font-weight:600;border-radius:12px;padding:2px 10px;font-size:13px}
+.qh{display:flex;align-items:center;gap:12px;margin-bottom:18px}.qh .bar{flex:1;margin:0;height:10px}
+.x{width:38px;height:38px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 3px 0 var(--ln)}
+.q{font-size:19px;font-weight:600;line-height:1.35;margin:10px 0 18px}
+.opt{display:block;width:100%;background:#fff;border:2px solid var(--ln);border-radius:16px;padding:14px 16px;margin-bottom:10px;box-shadow:0 3px 0 var(--ln);font-weight:500}
+.opt:hover:not(:disabled){border-color:var(--c)}.opt.ok{background:#e3f5ea;border-color:var(--ok)}.opt.no{background:#fde8e6;border-color:var(--no)}
+.exp{background:#fff;border-radius:16px;padding:14px;margin:6px 0 16px;font-size:14px;border-left:6px solid var(--c)}
+.res{text-align:center;padding-top:10px}.res .big{font-size:64px;font-weight:700;color:var(--co);line-height:1.1}.res .st{display:flex;justify-content:center;gap:8px;margin:12px 0 6px}
+.res .st svg{width:38px;height:38px;fill:#F5A623;stroke:#c98410}.res .st svg.off{fill:#eadfce;stroke:#d6c7b0}
+.sk{background:var(--co);color:#fff;border-radius:22px;padding:18px;display:flex;align-items:center;gap:14px}.sk b{font-size:19px;display:block;line-height:1.2}.sk span{font-size:13px;opacity:.95}
+.sk .fl{width:50px;height:50px;border-radius:50%;background:#fff;color:var(--co);display:grid;place-items:center;flex:none}
+.sr{display:flex;align-items:center;gap:12px;margin-bottom:14px;font-weight:500;font-size:14px}.sr .ic{width:28px;color:var(--c)}.sr .bar{flex:1;margin:0}.sr small{width:36px;text-align:right}
+.bg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.bd2{aspect-ratio:1;border-radius:18px;background:#fff;display:grid;place-items:center;box-shadow:0 3px 0 var(--ln);color:var(--c)}.bd2.lock{background:#e7ddd0;color:#aa9f93}.bd2 svg{width:32px;height:32px}
+.bgn{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:6px;text-align:center}.bgn span{font-size:11.5px;color:var(--mu)}
+.pf{text-align:center;padding-top:6px}.pf .av{width:84px;height:84px;margin:0 auto 10px}.pf h1{font-size:22px;font-weight:600}
+.stt{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;margin:18px 0}.stt b{font-size:22px;display:block;font-weight:600}.stt span{font-size:12px;color:var(--mu)}
+.menu{display:flex;align-items:center;gap:12px;width:100%;background:#fff;border-radius:16px;padding:14px;margin-bottom:10px;box-shadow:0 3px 0 var(--ln);font-weight:500}
+.menu svg{color:var(--mu)}
+.inp{width:100%;border:2px solid var(--ln);border-radius:16px;background:#fff;padding:13px 16px;font:inherit;color:var(--ink);text-align:center;margin:14px 0}
+.ob{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;max-width:380px;margin:0 auto;padding:24px 18px}
+.ob h1{font-size:22px;font-weight:600;line-height:1.3;margin:18px 0 4px}
+.nav{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));background:#fff;border-radius:34px;padding:7px;display:flex;gap:4px;box-shadow:0 8px 24px rgba(80,40,20,.15);z-index:9;width:min(calc(100% - 28px),440px);justify-content:space-between}
+.nav button{height:46px;min-width:46px;border-radius:24px;display:flex;align-items:center;justify-content:center;gap:7px;padding:0 14px;color:var(--ink);font-weight:600;font-size:14px;flex:none}
+.nav button.on{background:var(--co);color:#fff}.nav button span{display:none}.nav button.on span{display:inline}
+.empty{text-align:center;color:var(--mu);padding:24px 0}
+@media (min-width:860px){.wrap{max-width:880px}.band{margin-left:-18px;margin-right:-18px;border-radius:0 0 36px 36px}.g2{grid-template-columns:repeat(3,1fr)}.g3{grid-template-columns:repeat(6,1fr)}.tile{font-size:13.5px}.nav{width:440px}.wrap.n{max-width:640px}}
+html{scroll-behavior:smooth}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+@keyframes pop{0%{transform:scale(.6);opacity:0}60%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+@keyframes tia{from{opacity:0;transform:translateY(20px) rotate(-14deg) scale(.7)}to{opacity:1;transform:rotate(-3deg)}}
+@keyframes tib{from{opacity:0;transform:translateY(20px) rotate(14deg) scale(.7)}to{opacity:1;transform:rotate(3deg)}}
+@keyframes grow{from{width:var(--f,0%)}}
+@keyframes ringin{from{stroke-dashoffset:163.4}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)}}
+@keyframes starin{from{opacity:0;transform:scale(0) rotate(-60deg)}60%{transform:scale(1.25) rotate(10deg)}to{opacity:1;transform:none}}
+@keyframes float{50%{transform:translateY(-9px) rotate(2deg)}}
+@keyframes blink{0%,93%,100%{transform:scaleY(1)}96.5%{transform:scaleY(.08)}}
+@keyframes open{from{opacity:0;transform:translateY(-8px)}}
+@keyframes turn{from{transform:rotate(0)}}
+@keyframes fade{from{opacity:0}}
+@keyframes bandin{from{opacity:0;transform:translateY(-36px)}}
+@keyframes navin{from{opacity:0;transform:translate(-50%,90px)}}
+@keyframes navpop{from{transform:scale(.8)}}
+@keyframes labelin{from{opacity:0;max-width:0}to{opacity:1;max-width:90px}}
+.enter :is(.hd,.card,.cc,.tile,.acc,.sr,.menu,.ql,.sk,.bd2,.opt,.exp,.pf,.sb,.q,.qh,.bt,h2,.res>*,.ob>*){animation:rise .55s cubic-bezier(.2,.8,.2,1) backwards}
+.enter .tile:nth-child(odd){animation-name:tia}.enter .tile:nth-child(even){animation-name:tib}
+.enter .bd2{animation-name:pop}
+.enter .wrap{animation:fade .35s ease backwards}
+.enter .band{animation:bandin .6s cubic-bezier(.2,.8,.2,1) backwards}
+.enter .bt .ib{animation:pop .6s .2s backwards}
+.enter .bar i{animation:grow .8s cubic-bezier(.2,.8,.2,1) .2s backwards}
+.enter .ring circle+circle{animation:ringin 1.1s cubic-bezier(.2,.8,.2,1) .2s backwards}
+.enter .st svg{animation:starin .7s cubic-bezier(.3,1.4,.5,1) .5s backwards}.enter .st svg:nth-child(2){animation-delay:.7s}.enter .st svg:nth-child(3){animation-delay:.9s}
+.first .nav{animation:navin .7s cubic-bezier(.2,.8,.2,1) .25s backwards}
+.enter .nav button.on{animation:navpop .45s cubic-bezier(.3,1.5,.5,1)}
+.nav button.on span{display:inline-block;white-space:nowrap;overflow:hidden;vertical-align:middle;animation:labelin .35s ease backwards}
+.nav button{transition:background .25s,color .25s,transform .15s}.nav button:active{transform:scale(.9)}
+.opt.ok{animation:pop .4s cubic-bezier(.3,1.5,.5,1)}.opt.no{animation:shake .4s}
+.exp{animation:rise .4s cubic-bezier(.2,.8,.2,1)}
+.acc .tx{animation:open .35s ease}.acc.open .ch{animation:turn .3s ease}
+.flw{display:block}.flw svg{margin:0 auto;animation:float 3.8s ease-in-out infinite}
+.eyes{transform-box:fill-box;transform-origin:center;animation:blink 4.8s infinite}
+.cc,.ql,.menu,.acc>button,.btn,.opt,.x{transition:transform .2s cubic-bezier(.2,.8,.2,1),box-shadow .2s,border-color .2s,background .2s}
+.cc:hover,.ql:hover,.menu:hover{transform:translateY(-3px)}.cc:active,.ql:active,.menu:active,.tile:active{transform:scale(.97)}
+.btn:hover{transform:translateY(-2px)}.opt:hover:not(:disabled){transform:translateY(-2px)}.x:hover{transform:rotate(90deg)}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(520px 320px at 92% -4%,rgba(246,107,82,.2),transparent 70%),radial-gradient(420px 320px at -12% 38%,rgba(139,123,224,.15),transparent 70%),radial-gradient(520px 380px at 100% 100%,rgba(245,166,35,.18),transparent 70%)}
+.band{background:linear-gradient(150deg,var(--c),var(--d))}
+.hd .chip{margin-left:auto;font-style:normal;display:flex;align-items:center;gap:6px;background:#fff;border-radius:16px;padding:6px 12px;font-size:13px;font-weight:600;box-shadow:0 3px 0 var(--ln)}.hd .chip svg{width:16px;height:16px;color:var(--co)}
+.hero{position:relative;overflow:hidden;width:100%;display:flex;align-items:center;gap:14px;border-radius:30px;padding:22px 20px;color:#fff;background:linear-gradient(135deg,#FF8A5B,#F66B52 55%,#E8455F);box-shadow:0 18px 30px -16px rgba(246,107,82,.7);isolation:isolate;margin-bottom:14px}
+.hero::before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.13);right:-60px;top:-90px;z-index:-1}
+.hero::after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;background:rgba(255,255,255,.1);left:42%;bottom:-70px;z-index:-1}
+.hero .hx{flex:1;display:block}.hero small{display:block;opacity:.92;font-size:12.5px}.hero b{display:block;font-size:19px;line-height:1.25;font-weight:600;margin:4px 0 12px}
+.hero .bar{display:block;background:rgba(255,255,255,.3);margin:0 0 14px;height:8px}.hero .bar i{background:#fff}
+.hero .hb{display:inline-flex;align-items:center;gap:6px;background:#fff;color:#d94a34;font-weight:600;border-radius:14px;padding:8px 14px;font-size:13.5px}.hero .hb svg{width:16px;height:16px}
+.hero .hm{flex:none}.hero .ring,.hero .ring svg{width:86px;height:86px}.hero .ring i{color:#fff;font-size:16px}
+.hero .ring circle:first-child{stroke:rgba(255,255,255,.28)}.hero .ring circle+circle{stroke:#fff}
+.stats2{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.mini{background:#fff;border-radius:20px;padding:12px;box-shadow:0 3px 0 var(--ln);display:flex;flex-direction:column;gap:2px}
+.mini i{width:32px;height:32px;border-radius:11px;background:var(--c);color:#fff;display:grid;place-items:center;margin-bottom:6px;font-style:normal}.mini i svg{width:17px;height:17px}
+.mini b{font-size:19px;font-weight:600;line-height:1.1}.mini span{font-size:11.5px;color:var(--mu)}
+.tip{display:flex;gap:12px;align-items:flex-start;background:#fff;border-radius:22px;padding:14px;box-shadow:0 3px 0 var(--ln);border:1.5px dashed #f1c98f}
+.tip .ti{width:42px;height:42px;border-radius:14px;background:#FFE7B8;color:#B8760B;display:grid;place-items:center;flex:none}
+.tip b{font-weight:600;display:block}.tip p{font-size:13.5px;color:#5a4e48;margin-top:2px}.tip small{color:var(--mu);font-size:11.5px}
+.h2r{display:flex;justify-content:space-between;align-items:baseline;margin:22px 0 12px}.h2r h2{margin:0}.h2r button{color:var(--co);font-weight:600;font-size:13.5px}
+.car{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -18px;padding:4px 18px 20px;scrollbar-width:none}.car::-webkit-scrollbar{display:none}
+.car .bc{flex:0 0 178px;scroll-snap-align:start}
+.bc{position:relative;overflow:hidden;isolation:isolate;border-radius:26px;background:linear-gradient(150deg,var(--c),var(--d));color:#fff;padding:16px;min-height:208px;display:flex;flex-direction:column;width:100%;box-shadow:0 16px 26px -16px var(--d)}
+.bc::before{content:"";position:absolute;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.15);right:-48px;top:-48px;z-index:-1}
+.bc::after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;background:rgba(255,255,255,.1);left:-30px;bottom:48px;z-index:-1}
+.bc .bn{position:absolute;right:14px;bottom:52px;font-size:84px;font-weight:700;line-height:1;opacity:.16;z-index:-1}
+.bc .pk{position:absolute;right:14px;top:8px}
+.bc .bi{width:46px;height:46px;border-radius:16px;background:rgba(255,255,255,.24);display:grid;place-items:center}.bc .bi svg{width:24px;height:24px}
+.bc b{display:block;margin-top:auto;padding-top:16px;font-size:16px;line-height:1.25;font-weight:600}
+.bc small{opacity:.92;font-size:12px}
+.bc .bar{display:block;background:rgba(255,255,255,.3);margin:10px 0 9px}.bc .bar i{background:#fff}
+.bc .bs{align-self:flex-start;font-size:11.5px;font-weight:600;background:rgba(255,255,255,.24);border-radius:10px;padding:2px 10px}
+.bg2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pills{display:flex;gap:8px;margin:-6px 0 18px;overflow-x:auto;scrollbar-width:none}
+.pill{padding:8px 18px;border-radius:20px;background:#fff;font-weight:600;font-size:13.5px;box-shadow:0 3px 0 var(--ln);flex:none;transition:background .2s,color .2s,transform .15s}.pill.on{background:var(--ink);color:#fff;box-shadow:0 3px 0 #000}.pill:active{transform:scale(.94)}
+.empty svg{margin:0 auto 10px}
+.bc,.hero{transition:transform .2s cubic-bezier(.2,.8,.2,1),box-shadow .2s}.bc:hover,.hero:hover{transform:translateY(-4px)}.bc:active,.hero:active{transform:scale(.97)}
+.enter :is(.bc,.hero,.mini,.tip,.pills,.empty,.h2r){animation:rise .55s cubic-bezier(.2,.8,.2,1) backwards}
+.mdl{position:fixed;inset:0;z-index:50;display:flex;align-items:flex-end;justify-content:center}
+.ov{position:absolute;inset:0;background:rgba(43,35,32,.5);backdrop-filter:blur(3px);animation:fade .25s ease}
+.sheet{position:relative;background:#fff;border-radius:30px 30px 0 0;width:min(100%,480px);padding:24px 22px calc(24px + env(safe-area-inset-bottom,0px));animation:sheetin .38s cubic-bezier(.2,.8,.2,1)}
+.sheet h3{font-size:19px;font-weight:600;margin:10px 0 6px;text-align:center}.sheet p{text-align:center;color:var(--mu);font-size:14px;margin-bottom:14px}.sheet .btn{margin-top:10px}.sh{display:grid;place-items:center}
+.btn.dg{background:#d64545;box-shadow:0 4px 0 #a93030}
+.toast{position:fixed;left:50%;top:calc(16px + env(safe-area-inset-top,0px));background:var(--ink);color:#fff;padding:12px 20px;border-radius:18px;font-weight:600;font-size:14px;z-index:60;box-shadow:0 10px 24px rgba(0,0,0,.25);animation:toast 2.4s ease forwards;white-space:nowrap}
+@keyframes sheetin{from{transform:translateY(100%)}}
+@keyframes toast{0%{opacity:0;transform:translate(-50%,-20px)}10%,85%{opacity:1;transform:translate(-50%,0)}100%{opacity:0;transform:translate(-50%,-10px)}}
+@media (min-width:860px){.car{display:grid;grid-template-columns:repeat(3,1fr);margin:0;padding:4px 0 8px}.car .bc{flex:none}.bg2{grid-template-columns:repeat(3,1fr)}.mdl{align-items:center}.sheet{border-radius:30px}}
+#splash{position:fixed;inset:0;z-index:100;background:linear-gradient(160deg,#FF8A5B,#F66B52 50%,#E8455F);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;color:#fff;padding:24px;cursor:pointer}
+#splash.out{animation:splashout .8s cubic-bezier(.7,0,.25,1) forwards;pointer-events:none}
+@keyframes splashout{to{transform:translateY(-106%);border-radius:0 0 50% 50%/0 0 20vh 20vh}}
+.sp-c{position:absolute;border-radius:50%;background:rgba(255,255,255,.13);animation:float 5s ease-in-out infinite}
+.sp-star{position:absolute;color:#fff;animation:twinkle 1.7s ease-in-out infinite}
+@keyframes twinkle{0%,100%{transform:scale(.4) rotate(0);opacity:.25}50%{transform:scale(1.15) rotate(25deg);opacity:1}}
+.sp-fl{filter:drop-shadow(0 14px 0 rgba(0,0,0,.12));animation:flpop .9s cubic-bezier(.3,1.5,.5,1) both,wiggle 1.4s ease-in-out 1s infinite}
+@keyframes flpop{from{transform:scale(0) rotate(-120deg);opacity:0}}
+@keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-6deg) translateY(-5px)}75%{transform:rotate(6deg) translateY(-5px)}}
+.pu{animation:look 2.2s ease-in-out .9s infinite}
+@keyframes look{0%,100%{transform:translate(0,0)}25%{transform:translate(-3px,1px)}60%{transform:translate(3px,-1px)}}
+.sp-b{display:flex;margin-top:14px;font-size:42px;font-weight:700;letter-spacing:-.5px;line-height:1}
+.sp-b span{display:inline-block;animation:jump .65s cubic-bezier(.3,1.6,.5,1) backwards}
+@keyframes jump{from{opacity:0;transform:translateY(46px) scale(.5) rotate(-12deg)}}
+.sp-t{margin-top:10px;font-size:14px;font-weight:500;opacity:.95;animation:rise .6s cubic-bezier(.2,.8,.2,1) 1.7s backwards}
+.sp-l{width:150px;height:10px;border-radius:10px;background:rgba(255,255,255,.3);margin-top:24px;overflow:hidden;animation:fade .4s 1.1s backwards}
+.sp-l i{display:block;height:100%;border-radius:10px;background:#fff;transform-origin:left;animation:load 1.4s cubic-bezier(.4,0,.2,1) 1.1s both}
+@keyframes load{from{transform:scaleX(0)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style></head><body>
+<div id="splash" role="status" aria-label="Memuat omahcoding">
+<i class="sp-c" style="width:260px;height:260px;left:-90px;top:-70px"></i><i class="sp-c" style="width:180px;height:180px;right:-60px;bottom:12%;animation-delay:-2s"></i><i class="sp-c" style="width:90px;height:90px;left:12%;bottom:8%;animation-delay:-3s"></i>
+<svg class="sp-star" style="left:16%;top:20%" width="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16l-6.5 5 2-7.5L2 9h7z"/></svg>
+<svg class="sp-star" style="right:18%;top:26%;animation-delay:.5s" width="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16l-6.5 5 2-7.5L2 9h7z"/></svg>
+<svg class="sp-star" style="right:24%;bottom:24%;animation-delay:1s" width="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16l-6.5 5 2-7.5L2 9h7z"/></svg>
+<svg class="sp-fl" width="170" viewBox="0 0 200 200" aria-hidden="true"><g fill="#FFF4E6"><circle cx="100" cy="48" r="38"/><circle cx="149.5" cy="83.9" r="38"/><circle cx="130.6" cy="142.1" r="38"/><circle cx="69.4" cy="142.1" r="38"/><circle cx="50.5" cy="83.9" r="38"/><circle cx="100" cy="100" r="52"/></g><g transform="translate(70 80)"><g stroke="#2b2320" stroke-width="1.6" stroke-linecap="round" fill="none"><path d="M9 7L7 3M16 5l-1-4M44 5l1-4M51 7l2-4"/></g><g class="eyes"><circle cx="17" cy="21" r="12" fill="#fff" stroke="#2b2320" stroke-width="2"/><circle cx="43" cy="21" r="12" fill="#fff" stroke="#2b2320" stroke-width="2"/><g class="pu"><circle cx="19" cy="22" r="7" fill="#2b2320"/><circle cx="45" cy="22" r="7" fill="#2b2320"/><circle cx="21.5" cy="19" r="2.2" fill="#fff"/><circle cx="47.5" cy="19" r="2.2" fill="#fff"/></g></g><path d="M24 37q6 4 12 0" stroke="#2b2320" stroke-width="2" stroke-linecap="round" fill="none"/></g></svg>
+<div class="sp-b" aria-hidden="true"><span style="animation-delay:1s;color:#FFF4E6">o</span><span style="animation-delay:1.06s;color:#FFF4E6">m</span><span style="animation-delay:1.12s;color:#FFF4E6">a</span><span style="animation-delay:1.18s;color:#FFF4E6">h</span><span style="animation-delay:1.24s;color:#2b2320">c</span><span style="animation-delay:1.3s;color:#2b2320">o</span><span style="animation-delay:1.36s;color:#2b2320">d</span><span style="animation-delay:1.42s;color:#2b2320">i</span><span style="animation-delay:1.48s;color:#2b2320">n</span><span style="animation-delay:1.54s;color:#2b2320">g</span></div>
+<p class="sp-t">Belajar Islam dan IPTEKS</p>
+<div class="sp-l"><i></i></div>
+</div>
+<div id="app"></div>
+<script>
+const C=[
+{t:"Akal dan Wahyu",k:"Hidayah, makna akal, makna wahyu",
+m:[["Lima bentuk hidayah","Menurut Muhammad Abduh, Allah memberi hidayah dalam lima bentuk: naluri (al-wijdan), indera (al-hawas), akal (al-‘aql), wahyu (al-wahyi), dan pertolongan Allah (al-tawfiq). Akal dan wahyu adalah dua petunjuk utama untuk peran manusia sebagai hamba dan khalifah."],["Pengertian akal","Kata ‘aqala berarti memahami, mengetahui, dan merenung. Dalam studi Islam, akal adalah daya berpikir dalam jiwa manusia untuk memperoleh pengetahuan dari alam sekitar. Al-Qur’an hanya memuat akal dalam bentuk kata kerja, misalnya ta’qilun."],["Pengertian wahyu","Secara bahasa, wahyu berarti pemberitahuan yang tersembunyi dan cepat. Dalam Islam, wahyu adalah firman Allah yang disampaikan kepada Nabi dan Rasul untuk diteruskan kepada manusia sebagai panduan hidup."]],
+q:[["Hidayah yang hanya diberikan kepada manusia, selain wahyu, adalah…",["Naluri","Indera","Akal","Taufiq"],2,"Naluri dan indera dimiliki makhluk lain juga. Akal diberikan khusus kepada manusia sebagai khalifah."],["Dalam al-Qur’an, kata akal muncul dalam bentuk…",["Kata benda saja","Kata kerja","Nama surat","Kata sifat saja"],1,"Al-Qur’an memuat bentuk kata kerja seperti ta’qilun dan ya’qilun, bukan bentuk kata benda al-‘aql."],["Arti wahyu secara bahasa adalah…",["Perenungan panjang","Pemberitahuan tersembunyi dan cepat","Hasil penelitian","Kebiasaan masyarakat"],1,"Wahyu mengandung makna isyarat, bisikan, dan kecepatan penyampaian."]]},
+{t:"Kedudukan dan Fungsi Akal dan Wahyu",k:"Ijtihad, ittiba’, taqlid",
+m:[["Fungsi akal","Akal adalah alat strategis untuk memahami al-Qur’an dan al-Sunnah, mengambil pesan keduanya lewat ijtihad, dan menjabarkannya agar manusia mampu mengelola bumi sebagai khalifah."],["Hasil akal bersifat relatif","Hasil pemikiran manusia relatif dan tentatif, jadi perlu dikoreksi dan disempurnakan terus-menerus. Karena itu taqlid buta tidak dihargai dalam Islam."],["Fungsi wahyu","Wahyu (al-Qur’an dan al-Sunnah) adalah sumber pokok ajaran Islam dan landasan etik yang membimbing akal. Kebenarannya mutlak, universal, dan mengikat."],["Ijtihad dan ittiba’","Ijtihad ialah mencurahkan kemampuan akal untuk memahami wahyu. Ittiba’ ialah mengikuti pendapat dengan mengetahui dalilnya. Hubungan akal dan wahyu bersifat fungsional, bukan struktural."]],
+q:[["Nilai kebenaran hasil pemikiran akal bersifat…",["Mutlak","Relatif dan tentatif","Pasti benar","Mengikat semua orang"],1,"Hanya wahyu yang bernilai mutlak. Pemahaman manusia atas wahyu tetap relatif."],["Ittiba’ berarti…",["Menolak semua pendapat","Mengikuti pendapat dengan mengetahui dalilnya","Mengikuti tanpa bertanya","Membuat hukum baru tanpa dalil"],1,"Berbeda dengan taqlid buta, ittiba’ disertai penelaahan alasan dan dalil."],["Wahyu langsung dan tidak langsung secara berurutan adalah…",["Hadis dan ijma’","Al-Sunnah dan al-Qur’an","Al-Qur’an dan al-Sunnah","Qiyas dan ijtihad"],2,"Al-Qur’an adalah wahyu langsung (lafdzi), al-Sunnah wahyu tidak langsung (maknawi/irsyadi)."]]},
+{t:"Akal dan Wahyu dalam Tujuan Penciptaan Manusia",k:"Khalifah, ilmu, ikhtiyar",
+m:[["Manusia dua dimensi","Manusia tercipta dari tanah (fisik) dan ditiupkan ruh dari Allah (spiritual). Ia dipandang sebagai puncak penciptaan alam, seperti buah bagi pohon dalam perumpamaan Rumi."],["Dua daya akal","Akal punya daya kognitif/teoretis (al-quwwah al-‘alimah) untuk mengetahui dan menyusun ilmu, serta daya praktis (al-quwwah al-‘amilah) untuk mengelola dorongan jiwa atau nafsu. Selain akal, manusia dianugerahi qalb (hati/intuisi)."],["Tujuan penciptaan","Manusia diciptakan menjadi khalifah Allah di bumi. Untuk itu ia diberi dua hadiah istimewa, yaitu ilmu pengetahuan (‘ilm) dan kebebasan memilih (ikhtiyar), dengan akal dan wahyu sebagai sarana."]],
+q:[["Dua hadiah untuk menjalankan tugas khalifah adalah…",["Harta dan kuasa","Ilmu dan kebebasan memilih","Kekuatan dan usia","Indera dan naluri"],1,"Ilmu (‘ilm) dan kebebasan memilih (ikhtiyar) menjadi bekal khalifah."],["Daya akal praktis (al-‘amilah) berfungsi untuk…",["Menyusun ilmu","Mengelola dan mengendalikan dorongan jiwa","Melihat benda","Menyimpan data"],1,"Daya kognitif untuk mengetahui, daya praktis untuk mengendalikan nafsu."],["Manusia disebut makhluk dua dimensi karena memiliki unsur…",["Akal dan nafsu","Fisik (tanah) dan spiritual (ruh)","Laki-laki dan perempuan","Dunia dan akhirat saja"],1,"Fisik dari tanah, spiritual karena ditiupkan ruh dari Allah."]]},
+{t:"Ilmu Pengetahuan",k:"Pengertian ilmu, iqra’, kedudukan ilmuwan",
+m:[["Pengertian ilmu","Ilmu (science, dari scire: mengetahui) mengandung tiga hal: pengetahuan, aktivitas, dan metode. Sebagai proses, ilmu tidak final dan kebenarannya relatif."],["Perintah mencari ilmu","Wahyu pertama (Q.S. al-‘Alaq: 1-5) memerintahkan membaca (iqra’), bukan shalat atau puasa. Membaca adalah pintu pertama ilmu."],["Kedudukan orang berilmu","Q.S. al-Zumar: 9 dan al-Mujadilah: 11 menegaskan orang berilmu tidak sama dengan yang tidak berilmu dan ditinggikan derajatnya."],["Mengapa umat Islam tertinggal?","Di antara sebabnya: penjajahan, pandangan Barat yang meminggirkan dunia Islam, konflik khilafiyah berkepanjangan, pemahaman Islam yang belum utuh, dan kejumudan."]],
+q:[["Tiga unsur makna ilmu menurut The Liang Gie adalah…",["Teori, hukum, fakta","Pengetahuan, aktivitas, metode","Akal, indera, hati","Observasi, hipotesis, kesimpulan"],1,"Ilmu dipahami sebagai pengetahuan, aktivitas, dan metode."],["Wahyu pertama yang turun memerintahkan…",["Shalat","Puasa","Membaca (iqra’)","Berhaji"],2,"Q.S. al-‘Alaq: 1-5 dimulai dengan perintah membaca."],["Termasuk faktor ketertinggalan umat Islam menurut materi adalah…",["Terlalu banyak ilmuwan","Konflik khilafiyah yang berkepanjangan","Terlalu banyak membaca al-Qur’an","Kemajuan teknologi"],1,"Energi umat banyak tersedot ke konflik internal, selain penjajahan dan kejumudan."]]},
+{t:"Pentingnya Penguasaan Ilmu",k:"Isyarat iptek dalam al-Qur’an",
+m:[["Tujuh i’tibar iptek","Al-Qur’an mengisahkan iptek para nabi: Qabil belajar mengubur dari gagak, Nuh membuat kapal, Ibrahim membangun Baitullah, Yusuf mengelola hasil bumi, Daud melunakkan besi dan membuat baju besi, Sulaiman memanfaatkan angin dan makhluk lain, serta Isa menyembuhkan penyakit."],["Dua sikap terhadap iptek","Ada yang memandang iptek secara utopistik dan oportunistik berlebihan, ada pula yang distopistik (pesimis dan cemas berlebihan). Keduanya tidak seimbang."],["Kewajiban menggali ilmu","Al-Qur’an dan al-Sunnah menciptakan iklim yang kondusif bagi sains. Sains Islam lahir dari perpaduan semangat wahyu dengan sains peradaban lain yang dikaji dan diolah."]],
+q:[["Nabi yang melunakkan besi dan membuat baju besi adalah…",["Nuh","Daud","Isa","Yusuf"],1,"Disebut dalam Q.S. al-Anbiya’: 80 dan Saba’: 10-11."],["Sikap distopistik terhadap iptek berarti…",["Menganggap iptek solusi semua hal","Menganggap iptek sumber bencana dan bersikap pesimis","Menolak membahas iptek","Menyeimbangkan iptek dengan wahyu"],1,"Distopistik adalah pandangan pesimis dan cemas berlebihan."],["Kapal pada masa air bah dibuat oleh Nabi…",["Ibrahim","Sulaiman","Nuh","Musa"],2,"Pembuatan kapal oleh Nabi Nuh termasuk bukti penguasaan teknologi dalam al-Qur’an."]]},
+{t:"Epistemologi Ilmu dalam Islam",k:"Bayani, burhani, irfani",
+m:[["Dua pertanyaan epistemologi","Apa yang dapat diketahui manusia, dan bagaimana mengetahuinya. Epistemologi Barat membatasi objek pada yang dapat diamati inderawi. Islam mengakui objek fisik (mahsusat) dan non-fisik (ma’qulat)."],["Tiga metode","Observasi (bayani) memakai indera. Demonstrasi (burhani) memakai akal untuk mengabstraksi makna dan menyimpulkan. Intuitif (‘irfani) memakai hati (qalb) lewat kontak langsung dengan objek non-fisik."],["Akal, wahyu, dan sumber ilmu","Akal bekerja sebagai sumber dan metode keilmuan. Wahyu adalah puncak pengetahuan dzauqi dan sumber pengetahuan bagi objek fisik maupun metafisik. Sumber esensial pengetahuan adalah Allah, pemilik al-‘Ilm. Ilmuwan Muslim memandang alam sebagai tanda-tanda Tuhan."]],
+q:[["Metode observasi (bayani) memakai sarana…",["Akal","Hati","Indera","Imajinasi"],2,"Observasi mengandalkan indera (hiss) untuk mengamati objek fisik."],["Metode ‘irfani bekerja melalui…",["Indera","Hati (qalb)","Percobaan laboratorium","Statistik"],1,"‘Irfani adalah kontak langsung dengan objek non-fisik lewat qalb."],["Ilmuwan Muslim memandang alam sebagai…",["Realitas otonom tanpa Tuhan","Tanda-tanda Tuhan","Benda mati semata","Objek yang tak bisa dikaji"],1,"Alam adalah ayat-ayat Tuhan sehingga teori ilmiah tetap terkait dengan nilai ketuhanan."]]}
+];
+const $=s=>document.querySelector(s);
+const CO=["#3B82D9","#3FB58F","#8B7BE0","#D9457B","#F5A623","#5E9A1F"],SN=["Akal & Wahyu","Fungsi Akal","Tujuan Hidup","Ilmu","Penguasaan Ilmu","Epistemologi"],ROM=["I","II","III","IV","V","VI"];
+const SV=(p,c="")=>`<svg class="i ${c}" viewBox="0 0 24 24">${p}</svg>`;
+const IC=['<path d="M12 3a6 6 0 0 0-4 10.5V17h8v-3.5A6 6 0 0 0 12 3zM9 21h6"/>','<path d="M12 3v18M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/>','<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>','<path d="M3 5h7a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H3zM21 5h-7a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h7z"/>','<path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16l-6.5 5 2-7.5L2 9h7z"/>','<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/>'];
+const P={home:'<path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',course:'<path d="M3 5h7a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H3zM21 5h-7a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h7z"/>',prog:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',chev:'<path d="M9 18l6-6-6-6"/>',back:'<path d="M15 18l-6-6 6-6"/>',x:'<path d="M18 6L6 18M6 6l12 12"/>',ck:'<path d="M5 13l4 4L19 7"/>',srch:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>',flame:'<path d="M12 2s5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-4-1-6 1-9z"/>',medal:'<circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/>',star:'<path d="M12 2l3 7h7l-5.5 4.5 2 7.5L12 16l-6.5 5 2-7.5L2 9h7z"/>',lock:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>',pen:'<path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',trash:'<path d="M3 6h18M8 6V4h8v2M6 6l1 15h10l1-15"/>',help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/>',cup:'<path d="M8 21h8M12 17v4M7 4h10v6a5 5 0 0 1-10 0zM7 6H3v2a4 4 0 0 0 4 4M17 6h4v2a4 4 0 0 1-4 4"/>'};
+const eg=()=>`<g stroke="#2b2320" stroke-width="1.6" stroke-linecap="round" fill="none"><path d="M9 7L7 3M16 5l-1-4M44 5l1-4M51 7l2-4"/></g><g class="eyes"><circle cx="17" cy="21" r="12" fill="#fff" stroke="#2b2320" stroke-width="2"/><circle cx="43" cy="21" r="12" fill="#fff" stroke="#2b2320" stroke-width="2"/><circle cx="19" cy="22" r="7" fill="#2b2320"/><circle cx="45" cy="22" r="7" fill="#2b2320"/><circle cx="21.5" cy="19" r="2.2" fill="#fff"/><circle cx="47.5" cy="19" r="2.2" fill="#fff"/></g><path d="M24 37q6 4 12 0" stroke="#2b2320" stroke-width="2" stroke-linecap="round" fill="none"/>`;
+const EY=w=>`<svg width="${w}" viewBox="0 0 60 42" aria-hidden="true">${eg()}</svg>`;
+const FL=`<span class="flw"><svg width="190" viewBox="0 0 200 200" aria-hidden="true"><g fill="#F66B52">${[0,72,144,216,288].map(a=>`<circle cx="${100+52*Math.sin(a*Math.PI/180)}" cy="${100-52*Math.cos(a*Math.PI/180)}" r="38"/>`).join("")}<circle cx="100" cy="100" r="52"/></g><g transform="translate(70 80)">${eg()}</g></svg></span>`;
+const BK=`<svg class="books" width="64" viewBox="0 0 64 44" aria-hidden="true"><rect x="4" y="30" width="54" height="11" rx="3" fill="#D9457B"/><rect x="8" y="19" width="50" height="11" rx="3" fill="#3B82D9"/><rect x="2" y="8" width="54" height="11" rx="3" fill="#5E9A1F"/><path d="M10 13h30" stroke="#fff" stroke-width="2"/></svg>`;
+let S={name:"",res:{},read:{},tab:"home",view:null,open:null,q:null,edit:false,f:""};
+try{Object.assign(S,JSON.parse(localStorage.getItem("aptivo")||"{}"));S.view=null;S.q=null;S.open=null;S.edit=false}catch(e){}
+const save=()=>{try{localStorage.setItem("aptivo",JSON.stringify({name:S.name,res:S.res,read:S.read}))}catch(e){}};
+const bp=i=>Math.round(((S.read[i]||[]).length+(S.res[i]!=null?1:0))/(C[i].m.length+1)*100);
+const tp=()=>Math.round(C.reduce((a,c,i)=>a+bp(i),0)/6);
+const done=()=>Object.keys(S.res).length,avg=()=>done()?Math.round(Object.values(S.res).reduce((a,b)=>a+b,0)/done()):0;
+const BG=()=>[["Pemula","medal",done()>=1],["Api","flame",done()>=3],["Bintang","star",Object.values(S.res).some(v=>v==100)],["Juara","cup",done()==6]];
+const ring=p=>{const c=2*Math.PI*26;return `<div class="ring"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="none" stroke="#f3e8d9" stroke-width="9"/><circle cx="32" cy="32" r="26" fill="none" stroke="#F66B52" stroke-width="9" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-p/100)}"/></svg><i>${p}%</i></div>`};
+const GR=[["#5AA5F5","#2D6FCB"],["#5ADDB5","#259775"],["#B0A3F5","#6A58D0"],["#F2639A","#BC2D63"],["#FFC85A","#EA8E0C"],["#8CCB43","#4A7E12"]];const sty=i=>`--c:${GR[i][0]};--d:${GR[i][1]}`;
+S.cf="all";S.modal=null;S.toast="";
+const bcard=i=>{const c=C[i],r=S.res[i],p=bp(i);return `<button class="bc" style="${sty(i)}" data-a="open" data-i="${i}"><span class="bn">${i+1}</span><span class="pk">${EY(38)}</span><span class="bi">${SV(IC[i])}</span><b>${SN[i]}</b><small>${c.m.length} subtopik · ${c.q.length} soal</small><span class="bar"><i style="width:${p}%"></i></span><span class="bs">${r!=null?"Selesai · skor "+r:p>0?"Berjalan "+p+"%":"Mulai belajar"}</span></button>`};
+function home(){const n0=C.findIndex((c,i)=>S.res[i]==null),all=n0<0,n=all?0:n0,d=new Date().getDate()%6;let tip=C[d].m[0][1].split(". ")[0]+".";if(tip.length>170)tip=tip.slice(0,167)+"…";
+const st=[["#3B82D9",P.ck,done()+"/6","Bab tuntas"],["#F5A623",P.star,avg(),"Rata-rata skor"],["#D9457B",P.medal,BG().filter(x=>x[2]).length+"/4","Lencana"]];
+return `<div class="hd"><div class="av">${EY(34)}</div><div><b>Halo, ${S.name}</b><span>mau belajar apa hari ini?</span></div><em class="chip">${SV(P.flame)}${done()} tuntas</em></div>
+<button class="hero" data-a="open" data-i="${n}"><span class="hx"><small>${all?"Semua bab tuntas":"Lanjutkan belajar"}</small><b>${all?"Hebat! Ulangi bab favoritmu":C[n].t}</b><span class="bar"><i style="width:${all?100:bp(n)}%"></i></span><span class="hb">${all?"Buka bab":bp(n)>0?"Lanjut belajar":"Mulai sekarang"}${SV(P.chev)}</span></span><span class="hm">${ring(tp())}</span></button>
+<div class="stats2">${st.map(x=>`<div class="mini" style="--c:${x[0]}"><i>${SV(x[1])}</i><b>${x[2]}</b><span>${x[3]}</span></div>`).join("")}</div>
+<div class="tip"><div class="ti">${SV(IC[0])}</div><div><b>Tahukah kamu?</b><p>${tip}</p><small>Dari Bab ${d+1}: ${SN[d]}</small></div></div>
+<div class="h2r"><h2>Materi kamu</h2><button data-a="tab" data-t="course">Lihat semua</button></div>
+<div class="car">${C.map((c,i)=>bcard(i)).join("")}</div>`}
+function courses(){const f=S.f.toLowerCase(),l=C.map((c,i)=>i).filter(i=>(C[i].t+C[i].k+SN[i]).toLowerCase().includes(f)&&(S.cf=="all"||(S.cf=="done")==(S.res[i]!=null)));
+return `<div class="hd"><div><b style="font-size:24px;font-weight:700">Semua bab</b><span>${C.length} bab · ${done()} selesai</span></div></div>
+<label class="sb">${SV(P.srch)}<input id="sq" type="search" value="${S.f}" placeholder="Cari bab atau topik…" aria-label="Cari bab"></label>
+<div class="pills">${[["all","Semua"],["todo","Belum"],["done","Selesai"]].map(x=>`<button class="pill ${S.cf==x[0]?"on":""}" data-a="cf" data-f="${x[0]}">${x[1]}</button>`).join("")}</div>
+${l.length?`<div class="bg2">${l.map(bcard).join("")}</div>`:`<div class="empty">${EY(64)}<p>Tidak ada bab yang cocok.<br>Ubah kata kunci atau filter.</p></div>`}`}
+const mdl=()=>`<div class="mdl"><button class="ov" data-a="mx" aria-label="Tutup"></button><div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="sh">${EY(56)}</div><h3 id="mt">Reset progres belajar?</h3><p>Semua skor kuis, lencana, dan tanda subtopik yang sudah dibaca akan dihapus. Namamu tetap tersimpan.</p><button class="btn dg blk" data-a="rok">Ya, reset sekarang</button><button class="btn alt blk" data-a="mx">Batal</button></div></div>`;
+function prog(){return `<div class="sk"><div class="fl">${SV(P.flame)}</div><div><b>${done()} bab tuntas</b><span>${done()==6?"Semua bab selesai. Luar biasa!":"Terus semangat, lanjutkan belajarmu"}</span></div></div>
+<h2>Per bab</h2>${C.map((c,i)=>`<div class="sr" style="--c:${CO[i]}"><span class="ic">${SV(IC[i])}</span><span style="width:104px">${SN[i]}</span><div class="bar"><i style="width:${bp(i)}%"></i></div><small>${bp(i)}%</small></div>`).join("")}
+<h2>Lencana</h2><div class="bg">${BG().map((b,i)=>`<div class="bd2 ${b[2]?"":"lock"}" style="--c:${CO[i]}">${SV(P[b[2]?b[1]:"lock"])}</div>`).join("")}</div><div class="bgn">${BG().map(b=>`<span>${b[0]}</span>`).join("")}</div><button class="menu" data-a="rs" style="margin-top:22px">${SV(P.trash)}Reset progres</button>`}
+function prof(){const b=BG();return `<div class="pf"><div class="av">${EY(58)}</div>${S.edit?`<input class="inp" id="nn" value="${S.name}" maxlength="20" aria-label="Nama"><button class="btn" data-a="sv">Simpan nama</button>`:`<h1>${S.name}</h1><span class="sm">Pelajar Islam dan IPTEKS</span>`}</div>
+<div class="card stt"><div><b>${done()}</b><span>bab tuntas</span></div><div><b>${b.filter(x=>x[2]).length}</b><span>lencana</span></div><div><b>${avg()}</b><span>rata-rata skor</span></div></div>
+<h2>Lemari piala</h2><div class="bg">${b.map((x,i)=>`<div class="bd2 ${x[2]?"":"lock"}" style="--c:${CO[i]}">${SV(P[x[2]?x[1]:"lock"])}</div>`).join("")}</div><div style="height:18px"></div>
+<button class="menu" data-a="en">${SV(P.pen)}Ubah nama</button><button class="menu" data-a="rs">${SV(P.trash)}Reset semua progres</button><button class="menu" data-a="hp">${SV(P.help)}Bantuan</button><p class="sm" id="hpt" style="padding:4px 6px"></p><p class="sm" style="text-align:center;margin-top:20px">Dibuat dengan cinta oleh <b>omahcoding</b></p>`}
+function detail(){const i=S.view,c=C[i],rd=S.read[i]||[];
+return `<div class="band" style="${sty(i)}"><button class="back" data-a="back">${SV(P.back)}Kembali</button><div class="bt"><div class="ib">${SV(IC[i])}</div><div><h1>${c.t}</h1><span>Bab ${ROM[i]} · ${c.m.length} subtopik · ${c.q.length} soal</span></div></div></div>
+<p class="sm" style="font-size:14px;color:#5a4e48;margin-bottom:14px">${c.k}. Buka tiap subtopik untuk membaca, lalu uji pemahamanmu lewat kuis.</p>
+<div class="card row" style="--c:${CO[i]}">${EY(46)}<div style="flex:1"><b style="font-weight:600">${rd.length} dari ${c.m.length} subtopik dibaca</b><div class="bar"><i style="width:${rd.length/c.m.length*100}%"></i></div></div></div>
+<h2>Subtopik</h2>${c.m.map((m,k)=>`<div class="acc ${S.open==k?"open":""}"><button data-a="tg" data-k="${k}" aria-expanded="${S.open==k}"><span class="ck ${rd.includes(k)?"on":""}">${SV(P.ck)}</span>${m[0]}<span class="ch">${SV(P.chev)}</span></button>${S.open==k?`<div class="tx">${m[1]}</div>`:""}</div>`).join("")}
+<h2>Latihan</h2><button class="ql" data-a="qs">${SV(P.pen)}<div><b style="font-weight:600">Kuis ${SN[i]}</b><div class="sm">${c.q.length} soal pilihan ganda</div></div>${S.res[i]!=null?`<span class="sc">${S.res[i]}</span>`:SV(P.chev)}</button>`}
+function quiz(){const Q=S.q,c=C[Q.i],col=`--c:${CO[Q.i]}`,hd=`<div class="qh"><button class="x" data-a="qx" aria-label="Tutup kuis">${SV(P.x)}</button><div class="bar"><i style="width:${Math.min(Q.n,c.q.length)/c.q.length*100}%;background:${CO[Q.i]};--f:${Q.pf||0}%"></i></div></div>`;
+if(Q.n>=c.q.length){const s=Math.round(Q.a.filter((a,k)=>a==c.q[k][2]).length/c.q.length*100),n=s==100?3:s>=60?2:1;
+return `${hd}<div class="res">${FL}<div class="big">${s}</div><div class="st">${[1,2,3].map(k=>SV(P.star,k>n?"off":"")).join("")}</div><p style="color:var(--mu);margin-bottom:22px">${s==100?"Sempurna! Kamu menguasai bab ini.":s>=60?"Bagus! Baca ulang bagian yang masih ragu.":"Tidak apa-apa. Baca materinya lagi lalu coba ulang."}</p><button class="btn blk" data-a="qb" style="margin-bottom:14px">Kembali ke bab</button><button class="btn alt blk" data-a="qr">Ulangi kuis</button></div>`}
+const q=c.q[Q.n],a=Q.a[Q.n];
+return `${hd}<p class="sm">Soal ${Q.n+1} dari ${c.q.length}</p><p class="q">${q[0]}</p>`+q[1].map((o,k)=>`<button class="opt ${a!=null?(k==q[2]?"ok":k==a?"no":""):""}" style="${col}" data-a="qa" data-o="${k}" ${a!=null?"disabled":""}>${o}</button>`).join("")+(a!=null?`<div class="exp" style="${col}"><b>${a==q[2]?"Benar!":"Kurang tepat."}</b> ${q[3]}</div><button class="btn blk" data-a="qn">${Q.n+1<c.q.length?"Lanjut":"Lihat skor"}</button>`:"")}
+function onb(){return `<div class="ob">${FL}<h1>Hai, aku Petal!<br>Siapa namamu?</h1><input class="inp" id="nm" maxlength="20" placeholder="Ketik namamu" aria-label="Nama kamu"><button class="btn blk" data-a="go">Lanjut</button><p class="sm" style="margin-top:20px">omahcoding</p></div>`}
+function nav(){return `<nav class="nav" aria-label="Menu utama">${[["home","Beranda"],["course","Bab"],["prog","Progres"],["user","Profil"]].map(t=>`<button class="${S.tab==t[0]&&S.view==null?"on":""}" data-a="tab" data-t="${t[0]}" aria-label="${t[1]}">${SV(P[t[0]])}<span>${t[1]}</span></button>`).join("")}</nav>`}
+const STG=".hd,.card,.cc,.tile,.acc,.sr,.menu,.ql,.sk,.bd2,.opt,.exp,.pf,.sb,.q,.qh,.bt,h2,.res>*,.ob>*,.bc,.hero,.mini,.tip,.pills,.empty,.h2r";
+const cu=el=>{if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;const m=el.textContent.match(/^(\d+)(.*)$/);if(!m)return;const n=+m[1],s=m[2],t0=performance.now();const f=t=>{const p=Math.min((t-t0)/900,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(n*e)+s;if(p<1)requestAnimationFrame(f)};el.textContent="0"+s;requestAnimationFrame(f)};
+let LK="";
+function render(){const A=$("#app");let k,h;
+if(!S.name){k="onb";h=onb()}
+else if(S.q){k="q"+S.q.i+"-"+S.q.n;h=`<div class="wrap n">${quiz()}</div>`}
+else{k=S.view!=null?"d"+S.view:S.tab;const body=S.view!=null?detail():{home,course:courses,prog,user:prof}[S.tab]();h=`<div class="wrap${S.view!=null?" n":""}">${body}</div>${nav()}`}
+if(S.modal)h+=mdl();if(S.toast)h+=`<div class="toast" role="status">${S.toast}</div>`;
+const en=k!==LK,fs=LK===""||LK==="onb";LK=k;A.className=en?"enter"+(fs?" first":""):"";A.innerHTML=h;if(S.modal){const b=A.querySelector(".sheet .btn.alt");if(b)b.focus()}
+if(en){scrollTo(0,0);A.querySelectorAll(STG).forEach((el,i)=>el.style.animationDelay=Math.min(i*45,520)+"ms");A.querySelectorAll(".ring i,.big,.stt b,.mini b").forEach(cu)}}
+const go=(f)=>{f();render()};
+document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t||!t.dataset.a)return;const a=t.dataset.a;
+go(()=>{
+if(a=="go"){const v=$("#nm").value.trim();S.name=v||"Teman";save()}
+else if(a=="tab"){S.tab=t.dataset.t;S.view=null;S.edit=false;scrollTo(0,0)}
+else if(a=="open"){S.view=+t.dataset.i;S.open=null;scrollTo(0,0)}
+else if(a=="back"){S.view=null;scrollTo(0,0)}
+else if(a=="tg"){const k=+t.dataset.k,i=S.view;S.open=S.open==k?null:k;(S.read[i]=S.read[i]||[]);if(!S.read[i].includes(k)){S.read[i].push(k);save()}}
+else if(a=="qs"||a=="qr"){S.q={i:S.view,n:0,a:[]}}
+else if(a=="qa"){S.q.a[S.q.n]=+t.dataset.o}
+else if(a=="qn"){S.q.pf=S.q.n/C[S.q.i].q.length*100;S.q.n++;const c=C[S.q.i];if(S.q.n>=c.q.length){const s=Math.round(S.q.a.filter((x,k)=>x==c.q[k][2]).length/c.q.length*100);S.res[S.q.i]=Math.max(S.res[S.q.i]||0,s);save()}}
+else if(a=="qx"||a=="qb"){S.q=null}
+else if(a=="en"){S.edit=true}
+else if(a=="sv"){S.name=$("#nn").value.trim()||S.name;S.edit=false;save()}
+else if(a=="rs"){S.modal="reset"}else if(a=="mx"){S.modal=null}else if(a=="rok"){S.res={};S.read={};S.modal=null;S.toast="Progres berhasil direset";save();setTimeout(()=>{S.toast="";render()},2400)}else if(a=="cf"){S.cf=t.dataset.f}
+else if(a=="hp"){setTimeout(()=>{const h=$("#hpt");if(h)h.textContent="Pilih bab, baca subtopiknya, lalu kerjakan kuis. Skor terbaik dan lencana tersimpan di perangkat ini."},0)}
+})});
+document.addEventListener("input",e=>{if(e.target.id=="sq"){S.f=e.target.value;render();const el=$("#sq");el.focus();el.setSelectionRange(S.f.length,S.f.length)}});
+document.addEventListener("keydown",e=>{if(e.key=="Escape"&&S.modal){S.modal=null;render()}if(e.key=="Enter"&&e.target.id=="nm")e.target.closest(".ob").querySelector("button").click()});
+(()=>{const sp=document.getElementById("splash"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;let d=0;const go=()=>{if(d)return;d=1;sp.classList.add("out");render();setTimeout(()=>sp.remove(),rm?0:850)};sp.addEventListener("click",go);setTimeout(go,rm?600:2700)})();
+</script></body></html>
